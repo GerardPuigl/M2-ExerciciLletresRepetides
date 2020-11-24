@@ -34,16 +34,16 @@ public class LletresRepetidesAPP {
 				System.out.println("VOCAL");
 				
 			}else if(nombre.get(i)== '0'||
-					nombre.get(i)== '1'||
-					nombre.get(i)== '2'||
-					nombre.get(i)== '3'||
-					nombre.get(i)== '4'||
-					nombre.get(i)== '5'||
-					nombre.get(i)== '6'||
-					nombre.get(i)== '7'||
-					nombre.get(i)== '8'||
-					nombre.get(i)== '9'){
-						System.out.println("Els noms de persones no contenen números!");
+				nombre.get(i)== '1'||
+				nombre.get(i)== '2'||
+				nombre.get(i)== '3'||
+				nombre.get(i)== '4'||
+				nombre.get(i)== '5'||
+				nombre.get(i)== '6'||
+				nombre.get(i)== '7'||
+				nombre.get(i)== '8'||
+				nombre.get(i)== '9'){
+				System.out.println("Els noms de persones no contenen números!");
 			}else{
 				System.out.println("CONSONANT");
 			}
