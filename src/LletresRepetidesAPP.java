@@ -9,6 +9,8 @@ public class LletresRepetidesAPP {
 		// Petición nombre mediante panel
 
 		String name = JOptionPane.showInputDialog("Escriu el teu nom");
+		
+		String surname = JOptionPane.showInputDialog("Escriu el teu cognom");
 
 		
 		/*
@@ -35,27 +37,59 @@ public class LletresRepetidesAPP {
 			arraylistname.add(name.charAt(i));
 		}
 
+		// Añadir lista apellido (Fase 4 del ejercicio)
+		
+		ArrayList<Character> arraylistsurname = new ArrayList();
+
+		for (int i = 0; i < surname.length(); i++) {
+			arraylistsurname.add(surname.charAt(i));
+		}
+
+		// Fusionar las dos listas (Fase 4 del ejercicio)
+	
+		ArrayList<Character> arraylistFullName = new ArrayList();
+		
+		for (char letra : arraylistname) {
+			arraylistFullName.add(letra);			
+		}
+		
+		arraylistFullName.add(' ');
+
+		for (char letra : arraylistsurname) {
+			arraylistFullName.add(letra);
+		}
+
+		for (char letra : arraylistFullName) {
+			System.out.print(letra);	
+		}
+		
+		System.out.println("");
+
 		// Imprime si son vocales o consonantes i detecta números o caracters extranys
 
-		for (int i = 0; i < arraylistname.size(); i++) {
+		for (int i = 0; i < arraylistFullName.size(); i++) {
 
-			char letra = Character.toUpperCase(arraylistname.get(i));
+			char letra = Character.toUpperCase(arraylistFullName.get(i));
 
 			if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U') {
 
-				System.out.println(arraylistname.get(i) + " és una vocal");
+				System.out.println(arraylistFullName.get(i) + " és una vocal");
 
 			} else if (Character.isDigit(letra)) {
 
-				System.out.println(arraylistname.get(i) + " Error, els noms de persones no contenen números!");
-
+				System.out.println(arraylistFullName.get(i) + " Error, els noms de persones no contenen números!");
+			
+			} else if (letra==' '){
+			
+				//no hacer nada
+				
 			} else if (Character.isAlphabetic(letra) == false) {
 
-				System.out.println(arraylistname.get(i) + " Error, els noms no contenen caracters especials!");
+				System.out.println(arraylistFullName.get(i) + " Error, els noms no contenen caracters especials!");
 
 			} else {
 
-				System.out.println(arraylistname.get(i) + " és una consonant");
+				System.out.println(arraylistFullName.get(i) + " és una consonant");
 
 			}
 		}		
@@ -64,7 +98,7 @@ public class LletresRepetidesAPP {
 		
 		Map<Character,Integer> contadorletras = new HashMap<Character,Integer>();
 		
-		for (char l : arraylistname) {
+		for (char l : arraylistFullName) {
 			
 			char key = Character.toUpperCase(l);
 			
@@ -91,11 +125,11 @@ public class LletresRepetidesAPP {
 			
 			if (contadorletras.get(key) == 1) {
 			
-				System.out.println("Hi ha " + contadorletras.get(key) + " lletra " + key);
+				System.out.println("Té " + contadorletras.get(key) + " lletra " + key);
 			
 			} else {
 			
-				System.out.println("Hi ha " + contadorletras.get(key) + " lletres " + key);
+				System.out.println("Té " + contadorletras.get(key) + " lletres " + key);
 			
 			}
 		}
