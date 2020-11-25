@@ -49,7 +49,7 @@ public class LletresRepetidesAPP {
 		
 		System.out.println(arraylistnombre.get(i) + " és una vocal");
 			
-	}else if(Character.isDigit(letra)==false){
+	}else if(Character.isDigit(letra)){
 		
 		System.out.println(arraylistnombre.get(i) + " Error, els noms de persones no contenen números!");
 	
@@ -61,7 +61,7 @@ public class LletresRepetidesAPP {
 		
 		System.out.println(arraylistnombre.get(i) + " és una consonant");
 
-			}
+	}
 		}		
 	}
 }
