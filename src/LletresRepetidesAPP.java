@@ -87,7 +87,7 @@ public class LletresRepetidesAPP {
 			
 			if (Character.isAlphabetic(key)) {
 
-				//	contadorletras.compute(key, contadorletras.get(key));
+				//	contadorletras.compute(key, contadorletras.get(key)+1);
 				
 				if (contadorletras.get(key) == null) {
 					
