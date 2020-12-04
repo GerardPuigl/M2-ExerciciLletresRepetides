@@ -1,0 +1,7 @@
+//Crear Array y bucle que lo recorra
+
+var nombre = [ 'G', 'E', 'R', 'A', 'R', 'D' ];
+
+for (var i = 0; i <= 5; i++) {
+    document.write(nombre[i],"<br/>");
+}
