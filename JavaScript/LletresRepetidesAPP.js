@@ -1,4 +1,4 @@
-//Crear Array y bucle que lo recorra
+//Crear Array, añadir letras
 
 var nombre = new Array;
 
@@ -10,6 +10,7 @@ nombre.push('R');
 nombre.push('D');
 nombre.push('1');
 
+// Comprobar si són vocales, consonates y números
 for (var i = 0; i < nombre.length; i++) {
     document.writeln(nombre[i], "<br/>");
     if (nombre[i] == 'A' ||
@@ -35,31 +36,3 @@ for (var i = 0; i < nombre.length; i++) {
     }
 }
 
-		//Mapear letras nombre
-		
-		Map<Character,Integer> contadorletras = new HashMap<Character,Integer>();
-		
-		for (char l : arraylistname) {
-			
-			char key = Character.toUpperCase(l);
-			
-			if (Character.isAlphabetic(key)) {
-
-				//	contadorletras.compute(key, contadorletras.get(key));
-				
-				if (contadorletras.get(key) == null) {
-					
-					contadorletras.put(key, 1);
-					
-				} else {
-					
-					contadorletras.put(key, contadorletras.get(key) + 1);
-
-				}
-			}
-
-		}
-
-		//Mostrar en pantalla los datos
-		
-		System.out.println(contadorletras.entrySet()); 
